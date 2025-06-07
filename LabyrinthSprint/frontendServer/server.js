@@ -11,7 +11,7 @@ app.listen(3005, () => {
 
     // Optional: keep backend WebSocket connection open for debug/logging
     setTimeout(() => {
-        socket = new WebSocket("ws://localhost:9002");
+        socket = new WebSocket("wss://completelabyrinthsprint.onrender.com");
 
         socket.on("open", () => {
             console.log("✅ WebSocket connected to backend");
