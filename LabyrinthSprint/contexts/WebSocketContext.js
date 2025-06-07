@@ -24,7 +24,7 @@ export const WebSocketProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        ws.current = new WebSocket('ws://10.0.0.81:9002');
+        ws.current = new WebSocket("wss://completelabyrinthsprint.onrender.com");
 
         ws.current.onopen = () => console.log('✅ WebSocket connected');
         ws.current.onerror = (e) => console.error('❌ WebSocket error:', e.message);
