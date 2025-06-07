@@ -13,7 +13,7 @@ private:
     int Id;
     char character; // 'P' for player
     int x, y;
-    std::unique_ptr<inputHandler> inputHandler;
+    std::unique_ptr<inputHandler> inputHandlerPtr;
     int mapSize;
 
 public:

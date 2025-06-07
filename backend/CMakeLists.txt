@@ -12,6 +12,8 @@ include_directories(
 # For Boost (only system, not asio!)
 find_package(Boost REQUIRED COMPONENTS system)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
 # For standalone ASIO
 find_package(asio REQUIRED)
 

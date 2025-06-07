@@ -13,7 +13,7 @@ Player::Player(Player&& other) noexcept
     character(std::exchange(other.character, '\0')),
     x(std::exchange(other.x, 0)),
     y(std::exchange(other.y, 0)),
-    inputHandler(std::move(other.inputHandler)) {
+    inputHandlerPtr(std::move(other.inputHandlerPtr)) {
 }
 
 Player& Player::operator=(Player&& other) noexcept
@@ -24,7 +24,7 @@ Player& Player::operator=(Player&& other) noexcept
         character = std::exchange(other.character, '\0');
         x = std::exchange(other.x, 0);
         y = std::exchange(other.y, 0);
-        inputHandler = std::move(other.inputHandler);
+        inputHandlerPtr = std::move(other.inputHandlerPtr);
     }
     return *this;
 }
@@ -122,7 +122,7 @@ std::pair<int, int> Player::actionToDelta(const std::string& action)
 
 void Player::update(std::string message)
 {
-    auto [player, action] = this->inputHandler->handleWebSocketInput(message);
+    auto [player, action] = this->inputHandlerPtr->handleWebSocketInput(message);
     auto [deltaX, deltaY] = this->actionToDelta(action);
     x += deltaX;
     y += deltaY;
