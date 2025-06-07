@@ -1,0 +1,68 @@
+﻿# ----------------------------------------
+# 🛠 Visual Studio build files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 🔧 Build results
+*.obj
+*.exe
+*.pch
+*.pdb
+*.ipch
+*.aps
+*.ncb
+*.ilk
+*.log
+*.tlog
+*.idb
+*.cache
+*.sbr
+
+# 📂 Build folders
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# 🧱 CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CMakeSettings.json
+CMakePresets.json
+
+# 📦 Package and archive files
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+*.vsidx
+Game.zip
+
+# ⚙️ Node/React Native dependencies
+node_modules/
+.expo/
+dist/
+web-build/
+
+# 🧰 Vcpkg-related files (source + build)
+vcpkg/
+vcpkg_installed/
+backend/vcpkg/
+backend/vcpkg_installed/
+backend/third_party/
+backend/third_party/websocketpp/
+
+# 🖥 macOS system files
+.DS_Store
+
+# 🌐 Local env files (optional)
+.env*
