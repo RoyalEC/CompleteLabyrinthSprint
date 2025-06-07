@@ -26,11 +26,10 @@ export default function MultiplayerLobby() {
         let wsUrl;
 
         if (Platform.OS === 'web') {
-            const { hostname } = window.location;
-            wsUrl = `ws://${hostname}:9002`;
+            wsUrl = `wss://completelabyrinthsprint.onrender.com`;
         } else {
             // Replace with your machine's local IP address during development
-            wsUrl = 'ws://10.0.0.81:9002';
+            wsUrl = 'wss://completelabyrinthsprint.onrender.com';
         }
 
         ws.current = new WebSocket(wsUrl);
